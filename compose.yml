@@ -1,0 +1,12 @@
+name: bootstrap-proto
+
+services:
+    web:
+        build: .
+        ports:
+            - 127.0.0.1:8080:80
+        develop:
+            watch:
+                - action: sync
+                  path: ./code
+                  target: /usr/local/apache2/htdocs/
